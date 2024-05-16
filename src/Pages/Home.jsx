@@ -27,7 +27,7 @@ const Homepage = () => {
                 CONTACT US
               </div>
               <div className="relative inline-block min-w-[47px] z-[1]">
-                LOGIN
+              <Link to="/login"className="mr-4">LOGIN</Link>
               </div>
             </div>
           </div>
@@ -55,15 +55,17 @@ const Homepage = () => {
             <div className="w-[645px] flex flex-row items-start justify-between gap-[20px] max-w-full mq750:flex-wrap">
               <div className="flex flex-col items-start justify-start pt-px px-0 pb-0">
                 <button className="cursor-pointer [border:none] py-[5px] px-[27px] bg-darkslateblue-100 rounded-3xs overflow-hidden flex flex-row items-start justify-start whitespace-nowrap hover:bg-cornflowerblue-200 active:animate-[1s_ease_0s_infinite_normal_none_shake-horizontal] active:opacity-[1]">
-                  <div className="relative text-xl tracking-[0.01em] font-dm-sans text-white text-left">
-                    Register as Jobseker
+                  <Link to='/jobseekersignup'><div className="relative text-xl tracking-[0.01em] font-dm-sans text-white text-left">
+                     Register as Jobseker
                   </div>
+                  </Link>
                 </button>
               </div>
               <button className="cursor-pointer [border:none] py-[5px] px-6 bg-darkslateblue-100 rounded-3xs overflow-hidden flex flex-row items-start justify-start whitespace-nowrap hover:bg-cornflowerblue-200 active:animate-[1s_ease_0s_infinite_normal_none_shake-horizontal] active:opacity-[1]">
-                <div className="relative text-xl tracking-[0.01em] font-dm-sans text-white text-left">
+                <Link to='/employersignup'><div className="relative text-xl tracking-[0.01em] font-dm-sans text-white text-left">
                   Register as Employer
                 </div>
+                </Link>
               </button>
             </div>
           </div>

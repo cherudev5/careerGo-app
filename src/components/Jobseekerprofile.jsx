@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const JobseekerProfile = () => {
     return (
       <div className="w-full relative bg-lavender-100 overflow-hidden flex flex-col items-center justify-start pt-[25px] px-5 pb-0 box-border gap-[19px] tracking-[normal] leading-[normal]">
@@ -7,11 +9,11 @@ const JobseekerProfile = () => {
             className="h-[34px] w-[170px] relative rounded object-cover mix-blend-normal z-[1]"
             loading="lazy"
             alt=""
-            src="/logo2-11@2x.png"
+            src="src\images\logo2.png"
           />
           <div className="w-56 flex flex-col items-start justify-start pt-[9px] px-0 pb-0 box-border">
             <div className="self-stretch flex flex-row items-start justify-between gap-[20px]">
-              <div className="relative inline-block min-w-[35px] z-[1]">HOME</div>
+              <div className="relative inline-block min-w-[35px] z-[1]"><Link to='/'>HOME</Link></div><div className="relative whitespace-pre-wrap inline-block min-w-[76px] shrink-0 z-[1]">HOME</div>
               <div className="relative whitespace-pre-wrap inline-block min-w-[76px] shrink-0 z-[1]">
                 CONTACT US
               </div>

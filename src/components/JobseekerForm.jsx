@@ -94,7 +94,7 @@ const JobSeekerForm = () => {
                 {/* Render the dot */}
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
-                    isActive ? 'bg-gold text-white' : isComplete ? 'bg-darkGreen text-white' : 'bg-gray-300 text-gray-700'
+                    isActive ? 'bg-lightsteelblue text-white' : isComplete ? 'bg-royalblue text-white' : 'bg-lightskyblue text-gray-700'
                   }`}
                 >
                   {step}
@@ -102,7 +102,7 @@ const JobSeekerForm = () => {
 
                 {/* Render the connecting line */}
                 {!isLastStep && (
-                  <div className={`flex-1 h-1 mx-2 ${isComplete ? 'bg-darkTeal' : 'bg-gray-300'}`} />
+                  <div className={`flex-1 h-1 mx-2 ${isComplete ? 'bg-darkslateblue-100' : 'bg-lightskyblue'}`} />
                 )}
               </div>
             </React.Fragment>
@@ -181,7 +181,7 @@ const JobSeekerForm = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 bg-darkTeal">
+    <div className="container mx-auto p-4 bg-gradient-to-r from-[#71e1ee] to-[#8494ee]">
       <h2 className="text-2xl font-bold mb text-wh text-center">Job Seeker Form</h2>
 
       {/* Render the step indicator */}
@@ -202,7 +202,7 @@ const JobSeekerForm = () => {
                     src={`/src/useravatar/${avatar}`} // Path to the user avatars directory
                     alt={`Avatar ${index + 1}`}
                     className={`w-12 h-15 rounded-full cursor-pointer m-1 ${
-                      formData.profilePicture === avatar ? 'border-2 border-darkGreen' : ''
+                      formData.profilePicture === avatar ? 'border-2 border-royalblue' : ''
                     }`}
                     onClick={() => setFormData({ ...formData, profilePicture: avatar })}
                   />
@@ -266,7 +266,7 @@ const JobSeekerForm = () => {
             <button
               type="button"
               onClick={nextStep}
-              className="p-2 bg-gold text-white rounded"
+              className="p-2 bg-lightsteelblue text-black rounded"
             >
               Next
             </button>
@@ -312,14 +312,14 @@ const JobSeekerForm = () => {
             <button
               type="button"
               onClick={prevStep}
-              className="p-2 bg-darkTeal text-white rounded mr-2"
+              className="p-2 bg-lightsteelblue text-black rounded mr-2"
             >
               Previous
             </button>
             <button
               type="button"
               onClick={nextStep}
-              className="p-2 bg-gold text-white rounded"
+              className="p-2 bg-lightsteelblue text-black rounded"
             >
               Next
             </button>
@@ -338,14 +338,14 @@ const JobSeekerForm = () => {
             <button
               type="button"
               onClick={prevStep}
-              className="p-2 bg-darkTeal text-white rounded mr-2"
+              className="p-2 bg-lightsteelblue text-black rounded mr-2"
             >
               Previous
             </button>
             <button
               type="button"
               onClick={nextStep}
-              className="p-2 bg-gold text-white rounded"
+              className="p-2 bg-lightsteelblue text-white rounded"
             >
               Next
             </button>
@@ -372,14 +372,14 @@ const JobSeekerForm = () => {
             <button
               type="button"
               onClick={prevStep}
-              className="p-2 bg-darkTeal text-white rounded mr-2"
+              className="p-2 bg-lightsteelblue text-black rounded mr-2"
             >
               Previous
             </button>
             <button
               type="button"
               onClick={nextStep}
-              className="p-2 bg-gold text-white rounded"
+              className="p-2 bg-lightsteelblue text-white rounded"
             >
               Next
             </button>
@@ -414,14 +414,14 @@ const JobSeekerForm = () => {
             <button
               type="button"
               onClick={prevStep}
-              className="p-2 bg-darkTeal text-white rounded mr-2"
+              className="p-2 bg-lightsteelblue text-black rounded mr-2"
             >
               Previous
             </button>
             <button
               type="button"
               onClick={nextStep}
-              className="p-2 bg-gold text-white rounded"
+              className="p-2 bg-lightsteelblue text-white rounded"
             >
               Next
             </button>
@@ -457,14 +457,14 @@ const JobSeekerForm = () => {
             <button
               type="button"
               onClick={prevStep}
-              className="p-2 bg-darkTeal text-white rounded mr-2"
+              className="p-2 bg-lightsteelblue text-black rounded mr-2"
             >
               Previous
             </button>
             <button
               type="button"
               onClick={nextStep}
-              className="p-2 bg-gold text-white rounded"
+              className="p-2 bg-lightsteelblue text-white rounded"
             >
               Next
             </button>
@@ -492,13 +492,14 @@ const JobSeekerForm = () => {
             <button
               type="button"
               onClick={prevStep}
-              className="p-2 bg-darkTeal text-white rounded mr-2"
+              className="p-2 bg-lightsteelblue text-black rounded mr-2"
             >
               Previous
             </button>
             <button
               type="submit"
-              className="p-2 bg-gold text-white rounded"
+              onClick={handleSubmit.formData}
+              className="p-2 bg-lightsteelblue text-white rounded"
             >
               Submit
             </button>

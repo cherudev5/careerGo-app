@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate  } from 'react-router-dom'; // Import useNavigate 
 import image from '../images/login.jpg';
 
 const LoginForm = () => {
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
+  const history = useNavigate (); // Initialize useNavigate 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +33,9 @@ const LoginForm = () => {
       const data = await response.json();
 
       console.log('API response:', data);
+
+      // Redirect to user profile upon successful login
+      history.push('/Jobseekerprofile'); // Change '/user/profile' to your actual profile route
     } catch (error) {
       console.error('API error:', error);
     }

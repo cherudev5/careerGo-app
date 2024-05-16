@@ -9,7 +9,7 @@ const jobseekersignup = () => {
         username: '',
         email: '',
         password: '',
-        phone:'',
+        phone_number:'',
         role: 'jobseeker',
     });
 
@@ -46,7 +46,8 @@ const jobseekersignup = () => {
         setErrorMessage('');
 
         try {
-            const response = await fetch('http://127.0.0.1:5050/users', {
+            const response = await fetch('https://careergo-api.onrender.com/users', 
+            {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -69,13 +70,13 @@ const jobseekersignup = () => {
                     username: '',
                     email: '',
                     password: '',
-                    phone:'',
+                    phone_number:'',
                     role: 'jobseeker',
                 });
                 setPasswordConfirmation('');
                 
                 setTimeout(() => {
-                    navigate('/Jobseeker-form');
+                    navigate('/jobseekerform');
                 }, 1000); 
 
             } else if (response.status === 400) {
@@ -126,19 +127,19 @@ const jobseekersignup = () => {
                             />
                         </div>
                         <div className="mb-2">
-                            <label htmlFor="phoneNumber" className="block text-darkTeal font-medium mb-2">
-                                Phone Number:
+                            <label htmlFor="phone_numberNumber" className="block text-darkTeal font-medium mb-2">
+                                phone_number Number:
                             </label>
                             
                                 <input
                                     type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    value={formData.phone}
+                                    id="phone_number"
+                                    name="phone_number"
+                                    value={formData.phone_number}
                                     onChange={handleInputChange}
                                     required
                                     className="border border-[#ffd700] p-2 w-full rounded-lg focus:outline-none focus:border-[#006400]"
-                                    placeholder="Enter phone number"
+                                    placeholder="Enter phone_number number in the format +2547xxxxxxxx"
                                 />
                             
                         </div>

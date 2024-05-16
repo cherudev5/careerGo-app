@@ -10,7 +10,7 @@ const SignupForm = () => {
         email: '',
         password: '',
         role: 'employer',
-        phone: '',
+        phone_number: '',
         
     });
 
@@ -47,7 +47,7 @@ const SignupForm = () => {
         setErrorMessage('');
 
         try {
-            const response = await fetch('http://127.0.0.1:5050/users', {
+            const response = await fetch('https://careergo-api.onrender.com//users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const SignupForm = () => {
                     email: '',
                     password: '',
                     role: 'employer',
-                    phone: '',
+                    phone_number: '',
                     
                 });
                 setPasswordConfirmation('');
@@ -91,13 +91,13 @@ const SignupForm = () => {
     };
 
     return (
-        <div className="flex justify-center items-center h-1/2 shadow-lg p-4 rounded bg-gradient-to-r from-[#354f52] to-[#7e9979]">
+        <div className="flex justify-center items-center h-1/2 shadow-lg p-4 rounded bg-gradient-to-r from-[#71e1ee] to-[#8494ee]">
             <div className="flex w-3/4 bg-white shadow-md rounded-md p-8">
                 <div className="w-1/2 flex-shrink-0">
                     <img
                         src={image}
                         alt="career"
-                        className="w-full h-full object-cover rounded-md border border-[#ffd700]"
+                        className="w-full h-full object-cover rounded-md border border-[#a5b6d6]"
                     />
                 </div>
 
@@ -134,19 +134,19 @@ const SignupForm = () => {
                             />
                         </div>
                         <div className="mb-2">
-                            <label htmlFor="phoneNumber" className="block text-darkTeal font-medium mb-2">
-                                Phone Number:
+                            <label htmlFor="phone_numberNumber" className="block text-darkTeal font-medium mb-2">
+                                phone_number Number:
                             </label>
                             
                                 <input
                                     type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    value={formData.phoneNumber}
+                                    id="phone_number"
+                                    name="phone_number"
+                                    value={formData.phone_numberNumber}
                                     onChange={handleInputChange}
                                     required
                                     className="border border-[#ffd700] p-2 w-full rounded-lg focus:outline-none focus:border-[#006400]"
-                                    placeholder="Enter phone number"
+                                    placeholder="Enter phone_number number in the format +2547xxxxxxxx"
                                 />
                             
                         </div>
@@ -194,7 +194,7 @@ const SignupForm = () => {
                         )}
                         <button
                             type="submit"
-                            className="bg-[#006400] text-white px-4 py-2 rounded-lg w-full hover:bg-[#446552]"
+                            className="bg-[#374369] text-white px-4 py-2 rounded-lg w-full hover:bg-[#446552]"
                         >
                             Sign Up
                         </button>
